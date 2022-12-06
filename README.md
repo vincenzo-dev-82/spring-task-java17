@@ -1,4 +1,5 @@
 # spring-task-java17 examples
+- 프로젝트는 빌드도구의 버전에 의존성이 있다
 - Gradle Compatibility
   - https://docs.gradle.org/current/userguide/compatibility.html
 
@@ -11,7 +12,7 @@
  - Gradle 7.3
  
  Language
- - Java11 OpneJDK17
+ - Java17 OpneJDK17
  
  Encoding
  - UTF-8
