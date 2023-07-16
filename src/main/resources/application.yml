@@ -36,6 +36,31 @@ spring:
     locale: ko_KR
     time-zone: Asia/Seoul
 
+
+# 1. Endpoint all disable
+# 2. Enable specific endpoints
+# 3. Exclude all endpoint for JMX and Expose specific endpoints
+#  # 4. Use other port for Actuator
+#  management.server.port = [포트번호]
+#  # 5. Change Actuator Default path
+#  management.endpoints.web.base-path = [/변경된 경로]
+management:
+#  endpoints:
+#    enabled-by-default: false
+  endpoint:
+#    info:
+#      enabled: true
+#    health:
+#      enabled: true
+    jmx:
+      exposure:
+        exclude: "*"
+    web:
+      exposure:
+        include: "info,health"
+        exclude: "env,beans"
+        base-path: /actuator
+
 logging:
   level:
     root: INFO
